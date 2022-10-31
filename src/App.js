@@ -17,12 +17,10 @@ function App() {
     `function add(a, b) {\n  return a + b;\n} \n\nconsole.log(add(2, 3))`
   );
 
-  const [ executionResult, setExecutionResult ] = React.useState('');
-
   const onRun = () => {
+    // eslint-disable-next-line no-eval
     eval(code);
   };
-
 
   return (
     <>
