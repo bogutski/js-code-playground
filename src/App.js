@@ -5,6 +5,7 @@ import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/themes/prism.css'; //Example style, you can use another
 
+
 function highlightWithLineNumbers(input, language) {
   return highlight(input, language)
     .split('\n')
@@ -14,7 +15,8 @@ function highlightWithLineNumbers(input, language) {
 
 function App() {
   const [code, setCode] = React.useState(
-    `function add(a, b) {\n  return a + b;\n} \n\nconsole.log(add(2, 3))`
+    ''
+    // `function add(a, b) {\n  return a + b;\n} \n\nconsole.log(add(2, 3))`
   );
 
   const onRun = () => {
@@ -32,7 +34,7 @@ function App() {
         highlight={(code) => highlightWithLineNumbers(code, languages.js)}
         padding={10}
         style={{
-          fontFamily: '"Fira code", "Fira Mono", monospace',
+          fontFamily: 'monospace',
           fontSize: 20,
         }}
       />
